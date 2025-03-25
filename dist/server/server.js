@@ -1,9 +1,11 @@
-import express from 'express';
-const app = express();
-app.listen(3000);
-console.log("Server on port 3000");
+import express from 'express'
+import { PORT } from '../config/config.js'
 
+const app = express()
 
-app.get('/', (req, res) => {
-  res.send('Welcome to server')
+app.get('/', async (req, res) => {
+  console.log('nadasssss')
 })
+
+app.listen(PORT)
+console.log('Server on port', PORT)
