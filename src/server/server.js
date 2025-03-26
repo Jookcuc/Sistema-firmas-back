@@ -1,11 +1,15 @@
 import express from 'express'
 import { PORT } from '../config/config.js'
+import routerUser from '../routes/user/index.js'
+import routerLicense from '../routes/license/index.js'
 
 const app = express()
 
-app.get('/', async (req, res) => {
-  console.log('nadasssss')
-})
+app.use(express.json())
 
-app.listen(PORT)
-console.log('Server on port', PORT)
+app.use('/api/users', routerUser)
+app.use('/api/licenses', routerLicense)
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
+})
