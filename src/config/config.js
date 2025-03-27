@@ -1,7 +1,14 @@
-export const PORT = process.env.PORT || 3000
+import dotenv from 'dotenv';
+import path from 'path';
 
-export const DB_HOST = process.env.DB_HOST || 'crossover.proxy.rlwy.net'
-export const DB_USER = process.env.DB_USER || 'postgres'
-export const DB_PASSWORD = process.env.DB_PASSWORD || 'pTmPrfUeVbGuFULZyjGCUhAwVRDtuGTM'
-export const DB_NAME = process.env.DB_NAME || 'SistemaFirmas'
-export const DB_PORT = process.env.DB_PORT || 55354
+dotenv.config({
+  path: path.resolve(process.cwd(), '.env')
+});
+
+export const PORT = process.env.PORT || 3000;
+
+export const DB_HOST = process.env.DB_HOST;
+export const DB_USER = process.env.DB_USER;
+export const DB_PASSWORD = process.env.DB_PASSWORD;
+export const DB_NAME = process.env.DB_NAME;
+export const DB_PORT = process.env.DB_PORT;
