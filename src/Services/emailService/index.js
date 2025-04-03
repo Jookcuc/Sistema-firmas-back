@@ -21,7 +21,7 @@ export const sendVerificationEmail = async (to, code) => {
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center;">
           <div style="text-align: center; margin-bottom: 20px;">
-            <img src="data:image/png;base64,${base64Image}" alt="Jook Logo" style="max-width: 100px; margin: 0 auto;" />
+            <img src='https://i.postimg.cc/JGjpszr3/jook.png' border='0' alt='jook'/>
           </div>
           <div style="padding: 20px;">
             <p style="margin-bottom: 15px;">Estimado usuario:</p>
